@@ -20,7 +20,7 @@ def home():
 def add_team():
     team_form = TeamForm()
 
-    if team_form.validated_on_submit():
+    if team_form.validate_on_submit():
         team_name = team_form.team_name.data
         new_team = Team(team_name, user_id)
         db.session.add(new_team)
