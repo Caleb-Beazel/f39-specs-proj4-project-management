@@ -16,6 +16,12 @@ def home():
 
     return render_template("home.html", team_form = team_form, project_form = project_form)
 
+@app.route("/users")
+def show_users():
+    users = User.query.all()
+
+    return render_template("users.html", users = users)
+
 @app.route("/add-team", methods=["POST"])
 def add_team():
     team_form = TeamForm()

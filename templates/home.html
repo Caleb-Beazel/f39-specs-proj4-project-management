@@ -7,6 +7,8 @@
     <title>Project Tracker</title>
 </head>
 <body>
+    {% extends "base.html" %}
+    {% block main %}
     <h1>Project Tracker</h1>
     <div class="form-container">
         <h3>Add a Team</h3>
@@ -51,6 +53,6 @@
             </div>
         </form>
     </div>
-    
+    {% endblock %}
 </body>
 </html>
